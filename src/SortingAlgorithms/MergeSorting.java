@@ -90,7 +90,5 @@ public class MergeSorting {
             System.out.print(num+" ");
         }
 
-
-
     }
 }

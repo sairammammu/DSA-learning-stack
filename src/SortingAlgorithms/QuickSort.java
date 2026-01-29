@@ -2,9 +2,12 @@ package SortingAlgorithms;
 
 public class QuickSort {
 
-    private static void quickSort(int array[])
+    private static void quickSort(int array[] , int start , int end)
     {
+
         
+
+
         
     }
 
@@ -18,12 +21,12 @@ public class QuickSort {
             System.out.print(num+" ");
         }
         System.out.println();
-        quickSort(array);
+        quickSort(array , 0 , array.length-1);
         System.out.println("Array after QuickSort....");
 
         for(int num : array)
         {
-            System.out.print(num+" ");
+            System.out.print(num+" "); 
         }
 
     }
