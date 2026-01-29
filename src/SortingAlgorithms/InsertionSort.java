@@ -15,21 +15,30 @@ package SortingAlgorithms;
 public class InsertionSort {
 
 
-    private  static  void insertionSort(int array[])
-    {
-        for(int i=1;i<array.length;i++)
-        {
-            int temp = array[i];
-            int left = i-1;
-            while(left>=0 && array[left]>temp)
-            {
-                array[left+1] = array[left];
-                left--;
-            }
-            array[left+1] = temp;
-        }
+    // Method to perform Insertion Sort on an integer array
+    private static void insertionSort(int array[]) {
 
+        // Start from the second element because the first element is already considered sorted
+        for (int i = 1; i < array.length; i++) {
+
+            // Store the current element to be inserted in the sorted portion
+            int temp = array[i];
+
+            // Index of the last element in the sorted portion (left side)
+            int left = i - 1;
+
+            // Move elements of the sorted portion that are greater than temp
+            // one position ahead to make space for temp
+            while (left >= 0 && array[left] > temp) {
+                array[left + 1] = array[left]; // Shift element to the right
+                left--; // Move left index backward
+            }
+
+            // Insert temp at the correct position
+            array[left + 1] = temp;
+        }
     }
+
     public static void main(String args[])
     {
         int array[] = {2,9,3,5,8,1,6,4,7};

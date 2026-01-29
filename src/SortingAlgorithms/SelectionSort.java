@@ -9,25 +9,31 @@ package SortingAlgorithms;
  */
 public class SelectionSort {
 
-    static void swap(int array[],int i,int j)
-    {
-        array[i] = array[i]+array[j]-(array[j]=array[i]);
+    // Method to swap two elements in the array without using a temporary variable
+    static void swap(int array[], int i, int j) {
+        // Swapping using arithmetic operations
+        // Note: This works only if there is no integer overflow
+        array[i] = array[i] + array[j] - (array[j] = array[i]);
     }
-    static void selectionSort(int array[])
-    {
-        for(int i=0;i<array.length-1;i++)
-        {
+
+    // Method to perform Selection Sort on an integer array
+    static void selectionSort(int array[]) {
+
+        // Loop through the array except the last element
+        for (int i = 0; i < array.length - 1; i++) {
+
+            // Assume the current index has the minimum element
             int min = i;
 
-            for(int j=i+1;j< array.length;j++)
-            {
-                if(array[min]>array[j])
-                {
-                    min = j;
+            // Find the index of the smallest element in the unsorted part
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[min] > array[j]) {
+                    min = j; // Update index of minimum element
                 }
             }
 
-            swap(array,i,min);
+            // Swap the found minimum element with the element at index i
+            swap(array, i, min);
         }
     }
 
