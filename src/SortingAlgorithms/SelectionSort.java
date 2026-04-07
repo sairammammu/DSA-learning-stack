@@ -14,6 +14,12 @@ public class SelectionSort {
         // Swapping using arithmetic operations
         // Note: This works only if there is no integer overflow
         array[i] = array[i] + array[j] - (array[j] = array[i]);
+
+        /*
+            a = a^b;
+            b  = a^b;
+            a = a^b;
+        */
     }
 
     // Method to perform Selection Sort on an integer array

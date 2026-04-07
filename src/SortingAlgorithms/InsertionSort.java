@@ -1,7 +1,5 @@
 package SortingAlgorithms;
 
-
-
 /*
     1.Consider the first value of the list as sorted and remaining values as unsorted.
     2.Create a for loop starting from index 1 to length of the list (for looping through
@@ -18,6 +16,7 @@ public class InsertionSort {
     // Method to perform Insertion Sort on an integer array
     private static void insertionSort(int array[]) {
 
+
         // Start from the second element because the first element is already considered sorted
         for (int i = 1; i < array.length; i++) {
 
@@ -33,7 +32,6 @@ public class InsertionSort {
                 array[left + 1] = array[left]; // Shift element to the right
                 left--; // Move left index backward
             }
-
             // Insert temp at the correct position
             array[left + 1] = temp;
         }
