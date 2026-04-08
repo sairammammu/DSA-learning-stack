@@ -65,7 +65,6 @@ public class MergeSorting {
         // Recursively sort both halves
         mergeSort(leftArray);
         mergeSort(rightArray);
-
         // Merge the sorted halves back into the original array
         merge(leftArray, rightArray, array);
     }

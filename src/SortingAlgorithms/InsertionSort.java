@@ -12,10 +12,8 @@ package SortingAlgorithms;
  */
 public class InsertionSort {
 
-
     // Method to perform Insertion Sort on an integer array
     private static void insertionSort(int array[]) {
-
 
         // Start from the second element because the first element is already considered sorted
         for (int i = 1; i < array.length; i++) {
